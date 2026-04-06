@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Grill Theory — Artisan Burgers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cursor personalizado -->
+  <div class="cursor" id="cursor">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- Textura grain sobre toda la página -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Loader de entrada -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <span class="loader__mark">&#9670;</span>
+      <p class="loader__text">The Grill Theory</p>
+      <div class="loader__bar"><div class="loader__fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <a href="#" class="navbar__logo">
+        <span class="logo-diamond">&#9670;</span>
+        <span class="logo-text">The Grill Theory</span>
+      </a>
+
+      <nav class="navbar__links" aria-label="Navegación principal">
+        <a href="#menu" class="nav-link" data-text="Menú">Menú</a>
+        <a href="#story" class="nav-link" data-text="Historia">Historia</a>
+        <a href="#testimonials" class="nav-link" data-text="Reseñas">Reseñas</a>
+      </nav>
+
+      <a href="#contact" class="navbar__reserve btn-magnetic">
+        <span>Reservar mesa</span>
+      </a>
+
+      <button class="navbar__hamburger" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <nav class="mobile-drawer__links">
+        <a href="#menu"         class="drawer-link">Menú</a>
+        <a href="#story"        class="drawer-link">Historia</a>
+        <a href="#testimonials" class="drawer-link">Reseñas</a>
+        <a href="#contact"      class="drawer-link">Reservar</a>
+      </nav>
+      <div class="mobile-drawer__footer">Bogotá, Colombia &mdash; Est. 2019</div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+
+      <!-- Imagen de fondo (lado derecho) -->
+      <div class="hero__visual">
+        <img
+          src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1400&q=85"
+          alt="The Theorem — hamburguesa insignia"
+          class="hero__img"
+          loading="eager"
+        />
+        <div class="hero__visual-overlay"></div>
+      </div>
+
+      <!-- Contenido editorial -->
+      <div class="hero__content">
+
+        <div class="hero__meta clip-reveal">
+          <span class="hero__location">Bogotá &mdash; Colombia</span>
+          <span class="hero__divider" aria-hidden="true"></span>
+          <span class="hero__est">Est. 2019</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__title-line clip-reveal">La teoría</span>
+          <span class="hero__title-line clip-reveal delay-1"><em>de lo</em></span>
+          <span class="hero__title-line hero__title-outline clip-reveal delay-2">perfecto.</span>
+        </h1>
+
+        <p class="hero__sub clip-reveal delay-3">
+          Ingredientes de origen único. Técnica obsesiva.<br />
+          Cada mordida, un argumento irrefutable.
+        </p>
+
+        <div class="hero__actions clip-reveal delay-4">
+          <a href="#menu" class="btn btn--gold btn-magnetic">
+            <span>Explorar Menú</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#story" class="btn btn--text">
+            <span>Nuestra Historia</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero__scroll">
+        <span class="hero__scroll-num">01</span>
+        <div class="hero__scroll-track">
+          <div class="hero__scroll-thumb"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Fuego Artesanal</span><span class="m-dot">&#9670;</span>
+        <span>Wagyu Premium</span><span class="m-dot">&#9670;</span>
+        <span>Pan Brioche Propio</span><span class="m-dot">&#9670;</span>
+        <span>Salsas Secretas</span><span class="m-dot">&#9670;</span>
+        <span>Trufa Negra</span><span class="m-dot">&#9670;</span>
+        <span>12h Caramelizado</span><span class="m-dot">&#9670;</span>
+        <span>Fuego Artesanal</span><span class="m-dot">&#9670;</span>
+        <span>Wagyu Premium</span><span class="m-dot">&#9670;</span>
+        <span>Pan Brioche Propio</span><span class="m-dot">&#9670;</span>
+        <span>Salsas Secretas</span><span class="m-dot">&#9670;</span>
+        <span>Trufa Negra</span><span class="m-dot">&#9670;</span>
+        <span>12h Caramelizado</span><span class="m-dot">&#9670;</span>
+      </div>
+    </div>
+
+    <!-- ===================== MENU (Lista Editorial) ===================== -->
+    <section class="menu" id="menu">
+      <div class="menu__container">
+
+        <div class="menu__header reveal">
+          <p class="eyebrow">Nuestro Menú</p>
+          <h2 class="section-title">Cada plato,<br /><em>una hipótesis probada.</em></h2>
+        </div>
+
+        <!-- Imagen flotante que aparece en hover de cada item -->
+        <div class="menu__image-preview" id="menuImagePreview" aria-hidden="true">
+          <img src="" alt="" id="menuPreviewImg" />
+        </div>
+
+        <ul class="menu__list" id="menuList">
+
+          <li class="menu__item reveal"
+              data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80">
+            <div class="menu__item-inner">
+              <span class="menu__num">01</span>
+              <div class="menu__info">
+                <h3 class="menu__name">The Theorem</h3>
+                <p class="menu__desc">200g wagyu, queso brie fundido, cebolla caramelizada 12h, salsa trufada, pan brioche tostado</p>
+                <div class="menu__tags">
+                  <span class="tag">Signature</span>
+                  <span class="tag">Wagyu</span>
+                </div>
+              </div>
+              <span class="menu__price">$52.000</span>
+              <div class="menu__arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </li>
+
+          <li class="menu__item reveal delay-1"
+              data-img="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=700&q=80">
+            <div class="menu__item-inner">
+              <span class="menu__num">02</span>
+              <div class="menu__info">
+                <h3 class="menu__name">The Axiom</h3>
+                <p class="menu__desc">Smash doble 2×120g, cheddar americano, pepinillos artesanales, salsa especial de la casa</p>
+                <div class="menu__tags">
+                  <span class="tag">Bestseller</span>
+                </div>
+              </div>
+              <span class="menu__price">$38.000</span>
+              <div class="menu__arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </li>
+
+          <li class="menu__item reveal delay-2"
+              data-img="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=700&q=80">
+            <div class="menu__item-inner">
+              <span class="menu__num">03</span>
+              <div class="menu__info">
+                <h3 class="menu__name">The Postulate</h3>
+                <p class="menu__desc">Pollo crujiente buttermilk, miel de sriracha, coleslaw de col morada, encurtidos</p>
+                <div class="menu__tags">
+                  <span class="tag">New</span>
+                  <span class="tag">Spicy</span>
+                </div>
+              </div>
+              <span class="menu__price">$34.000</span>
+              <div class="menu__arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </li>
+
+          <li class="menu__item reveal delay-3"
+              data-img="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=700&q=80">
+            <div class="menu__item-inner">
+              <span class="menu__num">04</span>
+              <div class="menu__info">
+                <h3 class="menu__name">Lemma Fries</h3>
+                <p class="menu__desc">Papas doble cocción, polvo de parmesano, trufa negra, aioli ahumado artesanal</p>
+                <div class="menu__tags">
+                  <span class="tag">Side</span>
+                  <span class="tag">Trufa</span>
+                </div>
+              </div>
+              <span class="menu__price">$22.000</span>
+              <div class="menu__arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </li>
+
+          <li class="menu__item reveal delay-4"
+              data-img="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=700&q=80">
+            <div class="menu__item-inner">
+              <span class="menu__num">05</span>
+              <div class="menu__info">
+                <h3 class="menu__name">The Corollary</h3>
+                <p class="menu__desc">Veggie patty de lentejas y quinoa, aguacate, tomate rostizado, mayonesa de ají amarillo</p>
+                <div class="menu__tags">
+                  <span class="tag">Veggie</span>
+                </div>
+              </div>
+              <span class="menu__price">$30.000</span>
+              <div class="menu__arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ===================== STORY ===================== -->
+    <section class="story" id="story">
+
+      <!-- Imagen lado derecho con parallax -->
+      <div class="story__visual reveal-left">
+        <div class="story__visual-inner" id="storyParallax">
+          <img
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80"
+            alt="Chef trabajando en la cocina"
+            loading="lazy"
+          />
+        </div>
+        <div class="story__visual-caption">
+          <span>Bogotá, Colombia — 2019</span>
+        </div>
+      </div>
+
+      <!-- Texto lado izquierdo -->
+      <div class="story__text">
+        <p class="eyebrow reveal">Nuestra Historia</p>
+
+        <h2 class="story__title reveal delay-1">
+          No abrimos<br />un restaurante.<br /><em>Planteamos<br />una pregunta.</em>
+        </h2>
+
+        <div class="story__pull-quote reveal delay-2">
+          <span class="story__pull-bar" aria-hidden="true"></span>
+          <p>"¿Puede una hamburguesa ser<br /><em>verdaderamente perfecta?</em>"</p>
+        </div>
+
+        <div class="story__body reveal delay-3">
+          <p>
+            Pasamos 18 meses probando cortes, razas de ganado, temperaturas
+            y fermentaciones antes de abrir. Cada variable fue testeada.
+            Cada hipótesis, comprobada con fuego.
+          </p>
+          <p>
+            The Grill Theory no es un menú. Es un manifiesto sobre lo que
+            la comida casual puede y debe ser cuando se trata con el rigor
+            de la alta cocina.
+          </p>
+        </div>
+
+        <a href="#menu" class="btn btn--outline reveal delay-4 btn-magnetic">
+          <span>Ver el resultado</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ===================== STATS ===================== -->
+    <section class="stats reveal">
+      <div class="stats__container">
+        <div class="stats__item">
+          <div class="stats__figure">
+            <span class="stats__num" data-target="18">0</span>
+            <span class="stats__unit">meses</span>
+          </div>
+          <p class="stats__label">de I+D antes de abrir</p>
+        </div>
+        <div class="stats__sep" aria-hidden="true"></div>
+        <div class="stats__item">
+          <div class="stats__figure">
+            <span class="stats__num" data-target="3">0</span>
+            <span class="stats__unit">+</span>
+          </div>
+          <p class="stats__label">proveedores certificados</p>
+        </div>
+        <div class="stats__sep" aria-hidden="true"></div>
+        <div class="stats__item">
+          <div class="stats__figure">
+            <span class="stats__num" data-target="12">0</span>
+            <span class="stats__unit">h</span>
+          </div>
+          <p class="stats__label">cocción de cebollas</p>
+        </div>
+        <div class="stats__sep" aria-hidden="true"></div>
+        <div class="stats__item">
+          <div class="stats__figure">
+            <span class="stats__num" data-target="4800">0</span>
+            <span class="stats__unit">+</span>
+          </div>
+          <p class="stats__label">clientes al mes</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials__container">
+
+        <div class="testimonials__header reveal">
+          <p class="eyebrow">Reseñas</p>
+          <h2 class="section-title">El veredicto<br /><em>del jurado.</em></h2>
+        </div>
+
+        <div class="carousel reveal" id="carousel" tabindex="0" aria-label="Carrusel de testimonios">
+
+          <div class="carousel__ui">
+            <div class="carousel__counter">
+              <span id="carouselCurrent">01</span>
+              <span class="carousel__counter-sep"></span>
+              <span id="carouselTotal">04</span>
+            </div>
+            <div class="carousel__progress">
+              <div class="carousel__progress-bar" id="carouselProgressBar"></div>
+            </div>
+            <div class="carousel__nav">
+              <button class="carousel__btn" id="prevBtn" aria-label="Testimonio anterior">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+              </button>
+              <button class="carousel__btn" id="nextBtn" aria-label="Testimonio siguiente">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="carouselTrack">
+
+              <article class="carousel__slide">
+                <div class="testimonial">
+                  <div class="testimonial__rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="testimonial__score">5.0</span>
+                  </div>
+                  <blockquote class="testimonial__text">
+                    "Vine escéptico y me fui convertido. The Theorem es la hamburguesa
+                    más compleja y equilibrada que he comido en Bogotá. El brie fundido
+                    lo cambia todo."
+                  </blockquote>
+                  <footer class="testimonial__author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" alt="Carlos M." loading="lazy" />
+                    <div class="testimonial__author-info">
+                      <strong>Carlos Mendoza</strong>
+                      <span>Food Blogger — @carlosfoodie</span>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+
+              <article class="carousel__slide">
+                <div class="testimonial">
+                  <div class="testimonial__rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="testimonial__score">5.0</span>
+                  </div>
+                  <blockquote class="testimonial__text">
+                    "El pan brioche propio marca una diferencia brutal. Suave,
+                    con estructura, aguanta sin deshacerse. Ese detalle habla de
+                    profesionalismo total."
+                  </blockquote>
+                  <footer class="testimonial__author">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80" alt="Sofía R." loading="lazy" />
+                    <div class="testimonial__author-info">
+                      <strong>Sofía Ríos</strong>
+                      <span>Chef — Restaurante Maido Alumni</span>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+
+              <article class="carousel__slide">
+                <div class="testimonial">
+                  <div class="testimonial__rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="testimonial__score">5.0</span>
+                  </div>
+                  <blockquote class="testimonial__text">
+                    "Llevo 6 meses viniendo cada semana. La consistencia es lo que
+                    más me impresiona. Siempre igual de perfecta. Eso no es suerte,
+                    eso es disciplina."
+                  </blockquote>
+                  <footer class="testimonial__author">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&h=80&q=80" alt="Diego V." loading="lazy" />
+                    <div class="testimonial__author-info">
+                      <strong>Diego Vargas</strong>
+                      <span>Empresario & cliente frecuente</span>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+
+              <article class="carousel__slide">
+                <div class="testimonial">
+                  <div class="testimonial__rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="testimonial__score">5.0</span>
+                  </div>
+                  <blockquote class="testimonial__text">
+                    "El ambiente oscuro y la música elevan toda la experiencia.
+                    No estás comiendo una hamburguesa, estás viviendo un concepto.
+                    Regresaré siempre."
+                  </blockquote>
+                  <footer class="testimonial__author">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&h=80&q=80" alt="Valeria C." loading="lazy" />
+                    <div class="testimonial__author-info">
+                      <strong>Valeria Castro</strong>
+                      <span>Arquitecta de interiores</span>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="cta" id="contact">
+      <div class="cta__bg" id="ctaBg">
+        <img
+          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=80"
+          alt="Ambiente del restaurante"
+          loading="lazy"
+        />
+        <div class="cta__overlay"></div>
+      </div>
+      <div class="cta__content reveal">
+        <p class="eyebrow">¿Listo para comprobarlo?</p>
+        <h2 class="cta__title">Reserva tu<br /><em>experimento.</em></h2>
+        <p class="cta__info">Martes a Domingo &mdash; 12pm hasta 10pm</p>
+        <div class="cta__actions">
+          <a href="tel:+51999999999" class="btn btn--gold btn--large btn-magnetic">
+            <span>Llamar ahora</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn--ghost-light btn-magnetic">
+            <span>Ver ubicación</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__logo">
+            <span class="logo-diamond">&#9670;</span>
+            The Grill Theory
+          </p>
+          <p class="footer__tagline">Donde la ciencia se encuentra<br />con el fuego.</p>
+        </div>
+        <nav class="footer__nav">
+          <div class="footer__col">
+            <h4>Menú</h4>
+            <a href="#menu">Burgers</a>
+            <a href="#menu">Sides</a>
+            <a href="#menu">Bebidas</a>
+          </div>
+          <div class="footer__col">
+            <h4>Restaurante</h4>
+            <a href="#story">Historia</a>
+            <a href="#testimonials">Reseñas</a>
+            <a href="#contact">Reservas</a>
+          </div>
+          <div class="footer__col">
+            <h4>Social</h4>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Google Maps</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 The Grill Theory &mdash; Bogotá, Colombia</p>
+        <p>Hecho con fuego en Bogotá.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
